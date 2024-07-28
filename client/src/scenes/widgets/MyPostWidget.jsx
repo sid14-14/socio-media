@@ -47,7 +47,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`http://localhost:3001/posts`, { //sends post info to back-end
+    const response = await fetch(`https://socio-media-backend.onrender.com/posts`, { //sends post info to back-end
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
