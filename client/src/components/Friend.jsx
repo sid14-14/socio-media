@@ -26,7 +26,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   //api call to add/remove friend
   const patchFriend = async () => {
     const response = await fetch(
-      `http://localhost:3001/users/${_id}/${friendId}`,
+      `https://socio-media-backend.onrender.com/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
