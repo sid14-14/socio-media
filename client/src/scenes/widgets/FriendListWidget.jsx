@@ -14,7 +14,7 @@ const FriendListWidget = ({ userId }) => {
   // reason why we just cant grab from user's list of friends is caz we use this widget and click on friends, it will grab friends for that specific userid
   const getFriends = async () => {
     const response = await fetch(
-      `http://localhost:3001/users/${userId}/friends`,
+      `https://socio-media-backend.onrender.com/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
