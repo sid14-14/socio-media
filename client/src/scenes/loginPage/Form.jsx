@@ -67,7 +67,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name); //adding the img manually
 
     const savedUserResponse = await fetch( //save whatever recieved from back-end
-      "http://localhost:3001/auth/register",
+      "https://socio-media-backend.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
@@ -83,7 +83,7 @@ const Form = () => {
 
   const login = async (values, onSubmitProps) => { 
     // save whatever recieved from back-end
-    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+    const loggedInResponse = await fetch("https://socio-media-backend.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
